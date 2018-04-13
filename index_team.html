@@ -1,0 +1,217 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//HTML 4.01//EN" "http://www.sainteam.by/index_team.html">
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Команда SΛINTΞΛM</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style type="text/css">
+  table{
+    width: 100%;
+    height: 600px;
+    border: 1px solid black;
+    margin: 10px auto;
+  }
+
+  td{
+    background-color: rgba(231, 231, 231, 1);
+    border: 5px solid white;
+    min-height: 50px;
+    height: 100px;
+  }
+  .green {
+    text-shadow: #00ff11 0 0 10px; /* Свечение голубого цвета */
+   }
+   @import url("//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css");
+
+html, body {
+    height: 100%;
+}
+body {    
+    padding-top: 75px;
+}
+body.navbar-more-show  {
+  overflow: hidden;
+}
+
+.animate {
+    -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.navbar {
+    height: calc(100%);
+  max-height: 300px;
+  -webkit-transform: translate(0px, calc(-100% + 69px));
+  transform: translate(0px, calc(-100% + 69px));
+}
+.navbar .container:not(.navbar-more) {
+    padding: 0px;
+}
+.navbar-more-overlay {
+  background-color: rgba(102, 102, 102, 0.55);
+  display: none;
+  height: 100%;
+  left: 0px;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 1029;
+}
+.navbar-more-show > .navbar-more-overlay {
+  display: block;
+}
+.navbar-more-show > .navbar {
+  -webkit-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+}
+.navbar-nav.mobile-bar {
+  list-style: none;
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-align-items: stretch;
+  align-items: stretch;
+  margin: 0px 0px;
+}
+.navbar-nav.mobile-bar > li {
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  text-align: center;
+}
+.navbar-nav.mobile-bar > li > a > span.menu-icon {
+  display: block;
+  font-size: 1.8em;
+}
+.navbar-more {
+  background-color: rgb(255, 255, 255);
+  height: calc(100% - 69px);
+  overflow: auto;
+}
+.navbar-more .navbar-form {
+  border-width: 0px;
+}
+.navbar-more .navbar-nav > li > a {
+    color: rgb(64, 64, 64);   
+}
+.navbar-more > .navbar-nav > li > a > span.menu-icon {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+@media (min-width: 768px) {
+  .navbar {
+        height: auto;
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+  }
+  .navbar-nav.mobile-bar {
+    display: block;
+    max-height: 64px;
+    margin: 0px -15px;
+  }
+  .navbar-nav.mobile-bar > li > a > span.menu-icon {
+    display: none;
+  }
+}
+  </style>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter48088256 = new Ya.Metrika({
+                    id:48088256,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/48088256" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</head>
+<body style="background-color:black">
+  <style>
+  img{
+  width:100%;
+  }
+  </style>
+
+  <div class="navbar-more-overlay"></div>
+  <nav class="navbar navbar-inverse navbar-fixed-top animate">
+    <div class="container navbar-more visible-xs">
+      <ul class="nav navbar-nav">
+        <li><a href="index_prav.html">Правила</a></li>
+        <li><a href="index_activeadmin.html">Активные админы</a></li>
+        <li><a href="index_team.html">Команда</a></li>
+        <li><a href="index_contact.html">Контакты</a></li>
+      </ul>
+    </div>
+    <div class="container">
+      <div class="navbar-header hidden-xs">
+        <a href="index.html"><img alt="Brand" src="resource/sud.png" style="width:45px"></a>
+      <a href="indexnew.html"><img src="resource/judges.png" style="width:150px"></a>
+      </div>
+
+      <ul class="nav navbar-nav navbar-right mobile-bar">
+        <li><a href="index_prav.html">Правила</a></li>
+        <li><a href="index_activeadmin.html">Активные админы</a></li>
+        <li><a href="index_team.html">Команда</a></li>
+        <li><a href="index_contact.html">Контакты</a></li>
+      </ul>
+    </div>
+  </nav>
+
+<center>
+<img src="resource/judges.png" style="width:15%">
+<h1 style="color:#700000; text-align:center">Команда</h1>
+</center>
+<br>
+<h4 style="color:#ff0000"><a href="https://vk.com/prorokvlad" style="color:#ff0000">Юркевич Владислав |</a> The Saint Prophet</h4>
+<h4 style="color:#ff7faf"><a href="https://vk.com/vita.vitaminka" style="color:#ff7faf">Тихомирова Виталия |</a> _Vita_Vitaminka_</h4>
+<h4 style="color:#8700ff"><a href="https://vk.com/id326437301" style="color:#8700ff">Савинов Филипп |</a> Nevskiy</h4>
+<h4 style="color:#ab1d70"><a href="https://vk.com/davidchuk99" style="color:#ab1d70">Давидчук Леонид |</a> n1ce</h4>
+
+<br>
+<br>
+<br>
+<hr style="width:100%">
+
+<center>
+<font size="2" style="color:#700000">
+  Сайт написан для проекта SΛINTΞΛM. Сайт сделал Prorok Vladislav. Если хотите сотрудничать, то пишите на почту 
+<font size="2">
+  <a href="mailto:ProrokTVVladislav@gmail.com">ProrokTVVladislav@gmail.com</a>
+</font>
+</font>
+</center>
+
+<script src="js/navbar.js"></script>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script> 
+</body>
+</html>

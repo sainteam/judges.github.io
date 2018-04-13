@@ -1,0 +1,710 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//HTML 4.01//EN" "http://www.sainteam.by/index.html">
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Активные админы JUDGΞS</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <style type="text/css">
+    .red {
+    text-shadow: red 0 0 10px; /* Свечение красного цвета */
+   }
+   .purple {
+    text-shadow: #ab1d70 0 0 10px; /* Свечение красного цвета */
+   }
+   .orange {
+    text-shadow: orange 0 0 10px; /* Свечение красного цвета */
+   }
+   .green {
+    text-shadow: #00ff11 0 0 10px; /* Свечение голубого цвета */
+   }
+   .blue {
+    text-shadow: #00c2ff 0 0 10px; /* Свечение голубого цвета */
+   }
+   .gray {
+    text-shadow: #b7b7b7 0 0 10px;
+   }
+   .pinky {
+    text-shadow: #be6184 0 0 10px;
+   }
+  table{
+    width: 100%;
+    height: 600px;
+    border: 1px solid black;
+    margin: 10px auto;
+  }
+
+  td{
+    background-color: rgba(231, 231, 231, 1);
+    border: 5px solid white;
+    min-height: 50px;
+    height: 100px;
+  }
+  </style>
+  <style>
+  .card {
+    padding-top: 20px;
+    margin: 10px 0 20px 0;
+    background-color: rgba(214, 224, 226, 0.2);
+    border-top-width: 0;
+    border-bottom-width: 2px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.card .card-heading {
+    padding: 0 20px;
+    margin: 0;
+}
+
+.card .card-heading.simple {
+    font-size: 20px;
+    font-weight: 300;
+    color: #777;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.card .card-heading.image img {
+    display: inline-block;
+    width: 46px;
+    height: 46px;
+    margin-right: 15px;
+    vertical-align: top;
+    border: 0;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.card .card-heading.image .card-heading-header {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.card .card-heading.image .card-heading-header h3 {
+    margin: 0;
+    font-size: 14px;
+    line-height: 16px;
+    color: #262626;
+}
+
+.card .card-heading.image .card-heading-header span {
+    font-size: 12px;
+    color: #999999;
+}
+
+.card .card-body {
+    padding: 0 20px;
+    margin-top: 20px;
+}
+
+.card .card-media {
+    padding: 0 20px;
+    margin: 0 -14px;
+}
+
+.card .card-media img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.card .card-actions {
+    min-height: 30px;
+    padding: 0 20px 20px 20px;
+    margin: 20px 0 0 0;
+}
+
+.card .card-comments {
+    padding: 20px;
+    margin: 0;
+    background-color: #f8f8f8;
+}
+
+.card .card-comments .comments-collapse-toggle {
+    padding: 0;
+    margin: 0 20px 12px 20px;
+}
+
+.card .card-comments .comments-collapse-toggle a,
+.card .card-comments .comments-collapse-toggle span {
+    padding-right: 5px;
+    overflow: hidden;
+    font-size: 12px;
+    color: #999;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.card-comments .media-heading {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.card.people {
+    position: relative;
+    display: inline-block;
+    width: 170px;
+    height: 300px;
+    padding-top: 0;
+    margin-left: 20px;
+    overflow: hidden;
+    vertical-align: top;
+}
+
+.card.people:first-child {
+    margin-left: 0;
+}
+
+.card.people .card-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 170px;
+    height: 150px;
+    background-color: #ffffff;
+}
+
+.card.people .card-top.green {
+    background-color: #53a93f;
+}
+
+.card.people .card-top.blue {
+    background-color: #427fed;
+}
+
+.card.people .card-info {
+    position: absolute;
+    top: 150px;
+    display: inline-block;
+    width: 100%;
+    height: 101px;
+    overflow: hidden;
+    background: #ffffff;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.card.people .card-info .title {
+    display: block;
+    margin: 8px 14px 0 14px;
+    overflow: hidden;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 18px;
+    color: #404040;
+}
+
+.card.people .card-info .desc {
+    display: block;
+    margin: 8px 14px 0 14px;
+    overflow: hidden;
+    font-size: 12px;
+    line-height: 16px;
+    color: #737373;
+    text-overflow: ellipsis;
+}
+
+.card.people .card-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    padding: 10px 20px;
+    line-height: 29px;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.card.hovercard {
+    position: relative;
+    padding-top: 0;
+    overflow: hidden;
+    text-align: center;
+    background-color: rgba(102, 0, 0, 0.2);
+}
+
+.card.hovercard .cardheader {
+    background: url("resource/prorok.jpg");
+    background-size: cover;
+    height: 135px;
+}
+
+.card.hovercard .cardheader0 {
+    background: url("resource/pc2012.jpg");
+    background-size: cover;
+    height: 135px;
+}
+
+.card.hovercard .cardheader1 {
+    background: url("resource/jeffhamzarr.jpg");
+    background-size: cover;
+    height: 135px;
+}
+
+.card.hovercard .cardheader2 {
+    background: url("resource/n1ce.jpg");
+    background-size: cover;
+    height: 135px;
+}
+
+.card.hovercard .cardheader3 {
+    background: url("resource/Filipp.jpg");
+    background-size: cover;
+    height: 135px;
+}
+
+.card.hovercard .cardheader4 {
+    background: url("resource/vita.jpg");
+    background-size: cover;
+    height: 135px;
+}
+
+.card.hovercard .cardheader5 {
+    background: url("resource/redo.jpg");
+    background-size: cover;
+    height: 135px;
+}
+
+.card.hovercard .cardheader6 {
+    background: url("resource/luntick.jpg");
+    background-size: cover;
+    height: 135px;
+}
+
+.card.hovercard .cardheader7 {
+    background: url("resource/gorya.jpg");
+    background-size: cover;
+    height: 135px;
+}
+
+.card.hovercard .cardheader8 {
+    background: url("resource/phhok.jpg");
+    background-size: cover;
+    height: 135px;
+}
+
+.card.hovercard .cardheader9 {
+    background: url("resource/dim.jpg");
+    background-size: cover;
+    height: 135px;
+}
+
+.card.hovercard .cardheader10 {
+    background: url("resource/boy.jpg");
+    background-size: cover;
+    height: 135px;
+}
+
+.card.hovercard .cardheader11 {
+    background: url("resource/lenena.jpg");
+    background-size: cover;
+    height: 135px;
+}
+
+.card.hovercard .cardheader12 {
+    background: url("resource/ykon.jpg");
+    background-size: cover;
+    height: 135px;
+}
+
+.card.hovercard .cardheader13 {
+    background: url("resource/who.jpg");
+    background-size: cover;
+    height: 135px;
+}
+
+.card.hovercard .cardheader14 {
+    background: url("resource/bah.jpg");
+    background-size: cover;
+    height: 135px;
+}
+
+.card.hovercard .avatar {
+    position: relative;
+    top: -50px;
+    margin-bottom: -50px;
+}
+
+.card.hovercard .avatar img {
+    width: 100px;
+    height: 100px;
+    max-width: 100px;
+    max-height: 100px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 5px solid rgba(255,255,255,0.5);
+}
+
+.card.hovercard .info {
+    padding: 4px 8px 10px;
+}
+
+.card.hovercard .info .title {
+    margin-bottom: 4px;
+    font-size: 24px;
+    line-height: 1;
+    color: #262626;
+    vertical-align: middle;
+}
+
+.card.hovercard .info .desc {
+    overflow: hidden;
+    font-size: 12px;
+    line-height: 20px;
+    color: #737373;
+    text-overflow: ellipsis;
+}
+
+.card.hovercard .bottom {
+    padding: 0 20px;
+    margin-bottom: 17px;
+}
+
+.btn{ border-radius: 50%; width:32px; height:32px; line-height:18px;  }
+@import url("//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css");
+
+html, body {
+    height: 100%;
+}
+body {    
+    padding-top: 75px;
+}
+body.navbar-more-show  {
+    overflow: hidden;
+}
+
+.animate {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.navbar {
+    height: calc(100%);
+    max-height: 300px;
+    -webkit-transform: translate(0px, calc(-100% + 69px));
+    transform: translate(0px, calc(-100% + 69px));
+}
+.navbar .container:not(.navbar-more) {
+    padding: 0px;
+}
+.navbar-more-overlay {
+    background-color: rgba(102, 102, 102, 0.55);
+    display: none;
+    height: 100%;
+    left: 0px;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 1029;
+}
+.navbar-more-show > .navbar-more-overlay {
+    display: block;
+}
+.navbar-more-show > .navbar {
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+}
+.navbar-nav.mobile-bar {
+    list-style: none;
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-align-items: stretch;
+    align-items: stretch;
+    margin: 0px 0px;
+}
+.navbar-nav.mobile-bar > li {
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    text-align: center;
+}
+.navbar-nav.mobile-bar > li > a > span.menu-icon {
+    display: block;
+    font-size: 1.8em;
+}
+.navbar-more {
+    background-color: rgb(255, 255, 255);
+    height: calc(100% - 69px);
+    overflow: auto;
+}
+.navbar-more .navbar-form {
+    border-width: 0px;
+}
+.navbar-more .navbar-nav > li > a {
+    color: rgb(64, 64, 64);   
+}
+.navbar-more > .navbar-nav > li > a > span.menu-icon {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+@media (min-width: 768px) {
+    .navbar {
+        height: auto;
+        -webkit-transform: translate(0px, 0px);
+        transform: translate(0px, 0px);
+    }
+    .navbar-nav.mobile-bar {
+        display: block;
+        max-height: 64px;
+        margin: 0px -15px;
+    }
+    .navbar-nav.mobile-bar > li > a > span.menu-icon {
+        display: none;
+    }
+}
+</style>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter48088256 = new Ya.Metrika({
+                    id:48088256,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/48088256" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</head>
+<body style="background-color:black">
+  <style>
+  img{
+  width:100%;
+  }
+  </style>
+
+<div class="navbar-more-overlay"></div>
+  <nav class="navbar navbar-inverse navbar-fixed-top animate">
+    <div class="container navbar-more visible-xs">
+      <ul class="nav navbar-nav">
+        <li><a href="index_prav.html">Правила</a></li>
+        <li><a href="index_activeadmin.html">Активные админы</a></li>
+        <li><a href="index_team.html">Команда</a></li>
+        <li><a href="index_contact.html">Контакты</a></li>
+      </ul>
+    </div>
+    <div class="container">
+      <div class="navbar-header hidden-xs">
+        <a href="index.html"><img alt="Brand" src="resource/sud.png" style="width:45px"></a>
+      <a href="indexnew.html"><img src="resource/judges.png" style="width:150px"></a>
+      </div>
+
+      <ul class="nav navbar-nav navbar-right mobile-bar">
+        <li><a href="index_prav.html">Правила</a></li>
+        <li><a href="index_activeadmin.html">Активные админы</a></li>
+        <li><a href="index_team.html">Команда</a></li>
+        <li><a href="index_contact.html">Контакты</a></li>
+      </ul>
+    </div>
+  </nav>
+
+<h1 style="color:#700000; text-align:center">Активные админы</h1>
+<br>
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-lg-3 col-sm-6">
+
+            <div class="card hovercard">
+                <div class="cardheader">
+
+                </div>
+                <div class="avatar">
+                    <img alt="" src="resource/PV.jpg">
+                </div>
+                <div class="info">
+                    <div class="title">
+                        <h3 class="red" style="color:#ff0000">The Saint Prophet</h3>
+                    </div>
+                    <div class="desc"><h4 style="color:#700000">Владелец</h4></div>
+                    <div class="desc"><h4 style="color:#700000">Команда SΛINTΞΛM, JUDGΞS</h4></div>
+                    <div class="desc"><h4 class="green" style="color:#00ff24">99+ баллов</h4></div>
+                </div>
+                <div class="dropup" style="color:#700000">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+    <li><img src="resource/logo.png" alt="Медаль SΛINTΞΛM" style="width:15%">Трофей SΛINTΞΛM</li>
+    <li><img src="resource/sud.png" alt="Медаль JUDGΞS" style="width:15%">Трофей JUDGΞS</li>
+    <li><img src="resource/10589465.png" alt="Медаль Администратора сервера" style="width:15%">Медаль Администратор сервера</li>
+    <li style="color:white"><img src="resource/JH.png" alt="Медаль от PC2012" style="width:15%">Трофей Джефф Hamzarr</li>
+    <li style="color:orange"><img src="resource/nagrady_3-320.png" alt="Медаль от PC2012" style="width:15%">Трофей Nevskiy</li>
+    <li style="color:#ff0000"><img src="resource/PV.png" alt="Медаль от SΛIΝΤ✞PROROK✞HΛΚΞR" style="width:15%">Трофей The Saint Prophet</li>
+  </ul>
+            </div>
+            </div>
+
+        </div>
+
+        <div class="col-lg-3 col-sm-6">
+
+            <div class="card hovercard">
+                <div class="cardheader3">
+
+                </div>
+                <div class="avatar">
+                    <img alt="" src="resource/nev.jpg">
+                </div>
+                <div class="info">
+                    <div class="title">
+                        <h3 class="purple" style="color:#8700ff">Nevskiy</h3>
+                    </div>
+                    <div class="desc"><h4 style="color:#700000">Заместитель владельца</h4></div>
+                    <div class="desc"><h4 style="color:#700000">Команда SΛINTΞΛM, JUDGΞS</h4></div>
+                    <div class="desc"><h4 class="green" style="color:#00ff24">4 балла</h4></div>
+                </div>
+                <div class="dropup" style="color:#700000">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+    <li><img src="resource/logo.png" alt="Медаль SΛINTΞΛM" style="width:15%">Трофей SΛINTΞΛM</li>
+    <li><img src="resource/sud.png" alt="Медаль JUDGΞS" style="width:15%">Трофей JUDGΞS</li>
+    <li><img src="resource/10589465.png" alt="Медаль Администратора сервера" style="width:15%">Медаль Администратор сервера</li>
+    <li style="color:white"><img src="resource/JH.png" alt="Медаль от PC2012" style="width:15%">Трофей Джефф Hamzarr</li>
+    <li style="color:orange"><img src="resource/nagrady_3-320.png" alt="Медаль от PC2012" style="width:15%">Трофей Nevskiy</li>
+    <li style="color:#ff0000"><img src="resource/PV.png" alt="Медаль от SΛIΝΤ✞PROROK✞HΛΚΞR" style="width:15%">Трофей The Saint Prophet</li>
+  </ul>
+            </div>
+            </div>
+
+        </div>
+
+        <div class="col-lg-3 col-sm-6">
+
+            <div class="card hovercard">
+                <div class="cardheader2">
+
+                </div>
+                <div class="avatar">
+                    <img alt="" src="resource/n1ce.jpg">
+                </div>
+                <div class="info">
+                    <div class="title">
+                        <h3 class="purple" style="color:#ab1d70">n1ce</h3>
+                    </div>
+                    <div class="desc"><h4 style="color:#700000">Главный Администратор</h4></div>
+                    <div class="desc"><h4 style="color:#700000">Команда JUDGΞS</h4></div>
+                    <div class="desc"><h4 class="green" style="color:#00ff24">4 балла</h4></div>
+                </div>
+                <div class="dropup" style="color:#700000">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+    <li><img src="resource/logo.png" alt="Медаль SΛINTΞΛM" style="width:15%">Трофей SΛINTΞΛM</li>
+    <li><img src="resource/sud.png" alt="Медаль JUDGΞS" style="width:15%">Трофей JUDGΞS</li> 
+    <li><img src="resource/10589465.png" alt="Медаль Администратора сервера" style="width:15%">Медаль Администратор сервера</li>
+    <li style="color:white"><img src="resource/JH.png" alt="Медаль от PC2012" style="width:15%">Трофей Джефф Hamzarr</li>
+    <li style="color:orange"><img src="resource/nagrady_3-320.png" alt="Медаль от PC2012" style="width:15%">Трофей Nevskiy</li>
+    <li style="color:#ff0000"><img src="resource/PV.png" alt="Медаль от SΛIΝΤ✞PROROK✞HΛΚΞR" style="width:15%">Трофей The Saint Prophet</li>
+  </ul>
+            </div>
+            </div>
+
+        </div>
+
+        <div class="col-lg-3 col-sm-6">
+
+            <div class="card hovercard">
+                <div class="cardheader4">
+
+                </div>
+                <div class="avatar">
+                    <img alt="" src="resource/vitaminka.jpg">
+                </div>
+                <div class="info">
+                    <div class="title">
+                        <h3 class="pinky" style="color:#ff7faf">_Vita_Vitaminka_</h3>
+                    </div>
+                    <div class="desc"><h4 style="color:#700000">Главная судья</h4></div>
+                    <div class="desc"><h4 style="color:#700000">Команда JUDGΞS</h4></div>
+                    <div class="desc"><h4 class="green" style="color:#00ff24">4 балла</h4></div>
+                </div>
+                <div class="dropup" style="color:#700000">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+    <li><img src="resource/logo.png" alt="Медаль SΛINTΞΛM" style="width:15%">Трофей SΛINTΞΛM</li>
+    <li><img src="resource/sud.png" alt="Медаль JUDGΞS" style="width:15%">Трофей JUDGΞS</li> 
+    <li><img src="resource/10589465.png" alt="Медаль Администратора сервера" style="width:15%">Медаль Администратор сервера</li>
+    <li style="color:white"><img src="resource/JH.png" alt="Медаль от PC2012" style="width:15%">Трофей Джефф Hamzarr</li>
+    <li style="color:orange"><img src="resource/nagrady_3-320.png" alt="Медаль от PC2012" style="width:15%">Трофей Nevskiy</li>
+    <li style="color:#ff0000"><img src="resource/PV.png" alt="Медаль от SΛIΝΤ✞PROROK✞HΛΚΞR" style="width:15%">Трофей The Saint Prophet</li>
+  </ul>
+            </div>
+            </div>
+
+        </div>
+
+  </div>
+</div>
+</div>
+
+  </div>
+</div>
+
+<br>
+<br>
+<br>
+<hr style="width:100%">
+
+<center>
+<font size="2" style="color:#700000">
+  Сайт написан для проекта SΛINTΞΛM. Сайт сделал Prorok Vladislav. Если хотите сотрудничать, то пишите на почту 
+<font size="2">
+  <a href="mailto:ProrokTVVladislav@gmail.com">ProrokTVVladislav@gmail.com</a>
+</font>
+</font>
+
+</center>
+
+<script src="js/navbar.js"></script>
+<script src="js/text_anim.js"></script>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script> 
+</body>
+</html>
